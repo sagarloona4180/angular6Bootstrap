@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  public options: Object = {
+    placeholder: "Edit Me",
+    autofocus: true,
+    charCounterMax: 140,
+    events : {
+      'froalaEditor.focus' : function(e, editor) {
+        console.log(editor.selection.get());
+      }
+    }
+  }
 }
